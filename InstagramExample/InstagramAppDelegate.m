@@ -7,17 +7,41 @@
 //
 
 #import "InstagramAppDelegate.h"
+#import "RMMasterSDK.h"
+#import "AFNetworkActivityIndicatorManager.h"
+#import "InstagramRootViewController.h"
+#import "InstagramDemoViewController.h"
 
 @implementation InstagramAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    NSURLCache *URLCache = [[NSURLCache alloc] initWithMemoryCapacity:8 * 1024 * 1024 diskCapacity:20 * 1024 * 1024 diskPath:nil];
+    [NSURLCache setSharedURLCache:URLCache];
+    
+    [[AFNetworkActivityIndicatorManager sharedManager] setEnabled:YES];
+
+    InstagramRootViewController *viewController = [[InstagramRootViewController alloc] init];
+    //You can uncomment the next line to bypass the user authentication (for testing userless methods), and comment the previous line.
+    //InstagramDemoViewController *viewController = [[InstagramDemoViewController alloc] init];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = viewController;
     [self.window makeKeyAndVisible];
     return YES;
 }
+
+-(BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url {
+    return [[RMMasterSDK InstagramSDK] handleOpenURL:url];
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation {
+    return [[RMMasterSDK InstagramSDK] handleOpenURL:url];
+}
+
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

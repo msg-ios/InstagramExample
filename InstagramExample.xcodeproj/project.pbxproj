@@ -16,6 +16,9 @@
 		28CB395B1727747500161FBD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CB395A1727747500161FBD /* Default.png */; };
 		28CB395D1727747500161FBD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CB395C1727747500161FBD /* Default@2x.png */; };
 		28CB395F1727747500161FBD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28CB395E1727747500161FBD /* Default-568h@2x.png */; };
+		28FDF30B1728750500B28D39 /* InstagramRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FDF30A1728750500B28D39 /* InstagramRootViewController.m */; };
+		28FDF311172877DE00B28D39 /* InstagramDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28FDF310172877DE00B28D39 /* InstagramDemoViewController.m */; };
+		B33EF6B23CA54FB59A238852 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D791EB8B1DF84FCEACBBB177 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,12 @@
 		28CB395A1727747500161FBD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		28CB395C1727747500161FBD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		28CB395E1727747500161FBD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		28FDF3091728750500B28D39 /* InstagramRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramRootViewController.h; sourceTree = "<group>"; };
+		28FDF30A1728750500B28D39 /* InstagramRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramRootViewController.m; sourceTree = "<group>"; };
+		28FDF30F172877DD00B28D39 /* InstagramDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InstagramDemoViewController.h; sourceTree = "<group>"; };
+		28FDF310172877DE00B28D39 /* InstagramDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InstagramDemoViewController.m; sourceTree = "<group>"; };
+		8D10FE228AA2493D9CEF15B5 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		D791EB8B1DF84FCEACBBB177 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +51,7 @@
 				28CB39491727747500161FBD /* UIKit.framework in Frameworks */,
 				28CB394B1727747500161FBD /* Foundation.framework in Frameworks */,
 				28CB394D1727747500161FBD /* CoreGraphics.framework in Frameworks */,
+				B33EF6B23CA54FB59A238852 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +64,7 @@
 				28CB394E1727747500161FBD /* InstagramExample */,
 				28CB39471727747500161FBD /* Frameworks */,
 				28CB39461727747500161FBD /* Products */,
+				8D10FE228AA2493D9CEF15B5 /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,6 +82,7 @@
 				28CB39481727747500161FBD /* UIKit.framework */,
 				28CB394A1727747500161FBD /* Foundation.framework */,
 				28CB394C1727747500161FBD /* CoreGraphics.framework */,
+				D791EB8B1DF84FCEACBBB177 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -80,6 +92,10 @@
 			children = (
 				28CB39571727747500161FBD /* InstagramAppDelegate.h */,
 				28CB39581727747500161FBD /* InstagramAppDelegate.m */,
+				28FDF3091728750500B28D39 /* InstagramRootViewController.h */,
+				28FDF30A1728750500B28D39 /* InstagramRootViewController.m */,
+				28FDF30F172877DD00B28D39 /* InstagramDemoViewController.h */,
+				28FDF310172877DE00B28D39 /* InstagramDemoViewController.m */,
 				28CB394F1727747500161FBD /* Supporting Files */,
 			);
 			path = InstagramExample;
@@ -109,6 +125,7 @@
 				28CB39411727747500161FBD /* Sources */,
 				28CB39421727747500161FBD /* Frameworks */,
 				28CB39431727747500161FBD /* Resources */,
+				E6696E7EAA7542998A00776B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -160,6 +177,23 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E6696E7EAA7542998A00776B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		28CB39411727747500161FBD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -167,6 +201,8 @@
 			files = (
 				28CB39551727747500161FBD /* main.m in Sources */,
 				28CB39591727747500161FBD /* InstagramAppDelegate.m in Sources */,
+				28FDF30B1728750500B28D39 /* InstagramRootViewController.m in Sources */,
+				28FDF311172877DE00B28D39 /* InstagramDemoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,7 +245,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -233,7 +269,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -242,6 +278,7 @@
 		};
 		28CB39631727747500161FBD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D10FE228AA2493D9CEF15B5 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstagramExample/InstagramExample-Prefix.pch";
@@ -253,6 +290,7 @@
 		};
 		28CB39641727747500161FBD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D10FE228AA2493D9CEF15B5 /* Pods.xcconfig */;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "InstagramExample/InstagramExample-Prefix.pch";
@@ -281,6 +319,7 @@
 				28CB39641727747500161FBD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
